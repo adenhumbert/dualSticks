@@ -1,0 +1,12 @@
+objCtlInit - This just sits in the initialization room and would move to the next room once it
+	detects a click or finger touch
+
+objMultiTouchReceiver - This thing is a persistent object.  It is responsible for detecting and tracking fingers
+	and nothing else.  It sets the global variables for finger tracking.
+	
+objJoystick - This is a joystick.  It looks in the global variables and calculates joystick position when
+	a finger is in range.  It also can "retain" a finger if the finger goes out of the joystick range
+	but is not actually lifted up.  This is optional.
+	
+objShip - The ship creates the two joysticks and puts them in the corners.  It keeps the instance IDs
+	so it can later access the joysticks to do movement and shooting.
